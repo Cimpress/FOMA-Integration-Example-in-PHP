@@ -2,6 +2,30 @@
 
 A PHP example of how to integrate with the Fulfillment Order Manager
 
+## Examples in this repository
+
+All examples use the popular [Guzzle library](http://docs.guzzlephp.org/en/stable/index.html) for creating http calls
+
+### Authentification
+
+> Found in `src/setup.php`
+
+This file makes an post request to `https://oauth.cimpress.io/v2/token` with the client credentials and returns an authentification token.
+
+This file can not be run and only serves as setup for the other examples.
+
+### Get Item Details
+
+> Found in `src/get-item.php`
+
+If run, this file will get the item details for a specified item, you will have to change this to one of your items in the file itself.
+
+### Get Notifications
+
+> Found in `src/get-notifications.php`
+
+If run, this file will get the new notifications for a specified fulfiller, you will have to change this to your fulfiller.
+
 ## Prerequisites
 
 * A working PHP 5.6 (or higher) environment
