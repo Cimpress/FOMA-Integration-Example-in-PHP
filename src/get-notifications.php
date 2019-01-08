@@ -10,7 +10,7 @@ include __DIR__ .'/setup.php';
 $fulfillerId = 'kmr0f5gfvd';
 
 /**
- * Some setup
+ * Create a Guzzle Client with an auth token
  */
 
 $token = setup\getToken();
@@ -23,7 +23,7 @@ $client = new GuzzleHttp\Client([
 ]);
 
 /**
- * Get Item Data
+ * Get the notifications
  */
 
 $response = $client->get("/v1/notifications?fulfillerId=$fulfillerId");

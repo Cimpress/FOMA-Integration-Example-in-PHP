@@ -7,12 +7,15 @@ namespace setup {
 
     function getToken()
     {
+        /**
+         * Get the information from .env
+         */
 
         $dotEnv = new Loader(__DIR__ . '/../.env');
         $dotEnv->parse()->putenv(true);
 
         /**
-         * Client
+         * Create a Guzzle Client
          */
 
         $client = new Client([
@@ -22,7 +25,7 @@ namespace setup {
         ]);
 
         /**
-         * Make call
+         * Make the call to get the access token
          */
 
         $response = $client->post('https://oauth.cimpress.io/v2/token', [
@@ -36,9 +39,10 @@ namespace setup {
         );
 
         /**
-         * Return stuff
+         * Return the access token
          */
+
         $body = json_decode($response->getBody());
         return $body->access_token;
-}
+    }
 }

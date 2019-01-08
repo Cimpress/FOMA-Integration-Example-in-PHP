@@ -10,7 +10,7 @@ include __DIR__ .'/setup.php';
 $itemId = 'M63H814003';
 
 /**
- * Some setup
+ * Create a Guzzle Client with an auth token
  */
 
 $token = setup\getToken();
