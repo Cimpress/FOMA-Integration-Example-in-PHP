@@ -45,4 +45,8 @@ namespace setup {
         $body = json_decode($response->getBody());
         return $body->access_token;
     }
+
+    function getFomaUrl() {
+        return 'https://fulfillment.at.cimpress.io';
+    }
 }

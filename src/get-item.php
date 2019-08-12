@@ -14,8 +14,10 @@ $itemId = 'M63H814003';
  */
 
 $token = setup\getToken();
+$fomaUrl = setup\getFomaUrl();
+
 $client = new GuzzleHttp\Client([
-    'base_uri' => 'https://fulfillment.at.cimpress.io',
+    'base_uri' => $fomaUrl,
     'headers' => [
         'content-type' => 'application/json',
         'Authorization' => "Bearer $token"
